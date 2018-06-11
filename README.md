@@ -16,7 +16,7 @@ wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.5/gnutls-3.5.18.tar.xz
 ### Prepare the system for development:
 
 ```bash
-sudo yum install centos-release-scl devtoolset-7-gcc* -y
+sudo yum install centos-release-scl devtoolset-7-gcc* gtk3-devel -y
 scl enable devtoolset-7 bash
 gcc --version
 g++ --version
@@ -41,6 +41,8 @@ cd compile/
 ../configure
 make
 sudo make install
+sudo ldconfig
+cd ~/Downloads/
 ```
 
 ### Build wxWidgets:
@@ -50,6 +52,8 @@ cd wxWidgets-3.0.4/
 ./configure
 make
 sudo make install
+sudo ldconfig
+cd ~/Downloads/
 ```
 
 ### Build Nettle:
@@ -59,6 +63,7 @@ cd nettle-3.4/
 ./configure --enable-shared --prefix=/usr
 make
 sudo make install
+cd ~/Downloads/
 ```
 
 ### Build GnuTLS:
@@ -68,6 +73,7 @@ cd gnutls-3.5.18/
 ./configure --with-libnettle-prefix=/usr --with-included-unistring
 make
 sudo make install
+cd ~/Downloads/
 ```
 
 ### And finally build Filezilla:
