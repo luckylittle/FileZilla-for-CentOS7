@@ -16,7 +16,7 @@ wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.5/gnutls-3.5.18.tar.xz
 ### Prepare the system for development:
 
 ```bash
-sudo yum install centos-release-scl devtoolset-7-gcc* gtk3-devel -y
+sudo yum install centos-release-scl devtoolset-7-gcc* gtk3-devel libtasn1-devel libidn-devel p11-kit-devel pugixml-devel cppunit-devel sqlite-devel -y
 scl enable devtoolset-7 bash
 gcc --version
 g++ --version
