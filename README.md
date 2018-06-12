@@ -1,6 +1,6 @@
 # FileZilla-for-CentOS7
 
-## How to build FileZilla `v3.33.0` on CentOS `v7.5` from the source
+## How to build FileZilla Client `v3.33.0` on CentOS `v7.5` from the source
 
 ### Download all the dependencies first:
 
