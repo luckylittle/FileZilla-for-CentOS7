@@ -13,7 +13,7 @@ wget https://ftp.gnu.org/gnu/nettle/nettle-3.4.tar.gz
 wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.5/gnutls-3.5.18.tar.xz
 ```
 
-### Prepare the system for development:
+### Prepare system for the development:
 
 ```bash
 sudo yum install centos-release-scl devtoolset-7-gcc* gtk3-devel libtasn1-devel libidn-devel p11-kit-devel pugixml-devel cppunit-devel sqlite-devel -y
@@ -52,7 +52,10 @@ cd wxWidgets-3.0.4/
 ./configure
 make
 sudo make install
+sudo cp ~/Downloads/wxWidgets-3.0.4/lib/libwx_baseu_xml-3.0.so.0 /usr/lib64
 sudo ldconfig
+wx-config --version
+wxrc -h
 cd ~/Downloads/
 ```
 
@@ -87,3 +90,9 @@ make
 sudo make install
 filezilla
 ```
+
+### Screenshot:
+
+![images/filezilla-centos75-v3.33.0.png](images/filezilla-centos75-v3.33.0.png)
+
+Note: :point_up: has been compiled in a same way, but on GCC v8.1.0
